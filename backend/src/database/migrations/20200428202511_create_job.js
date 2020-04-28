@@ -1,0 +1,16 @@
+exports.up = function (knex) {
+  return knex.schema.createTable('job', function (table) {
+    table.increments();
+    table.string('title').notNullable();
+    table.string('description').notNullable();
+    table.string('tags').notNullable();
+    table.boolean('remote').notNullable();
+
+    table.string('company_id').notNullable();
+    table.foreign('company_id').references('id').inTable('company');
+  });
+};
+
+exports.down = function (knex) {
+  return knex.schema.dropTable('job');
+};
