@@ -2,7 +2,27 @@ const connection = require('../database/connection');
 
 module.exports = {
   async index(req, res) {
-    const jobs = await connection('job').select('*');
+    const { page = 1 } = req.query;
+
+    // gets array first position
+    const [count] = await connection('job').count();
+
+    const jobs = await connection('job')
+      .join('company', 'company.id', '=', 'job.company_id')
+      .limit(5)
+      .offset((page - 1) * 5)
+      .select([
+        'job.*',
+        'company.name',
+        'company.country',
+        'company.city',
+        'company.email',
+        'company.website',
+      ]);
+
+    // count value example: { 'count(*)': 15 }
+    res.header('X-Total-Count', count['count(*)']);
+
     return res.json({ jobs });
   },
   async create(req, res) {
