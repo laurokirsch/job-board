@@ -4,7 +4,6 @@ const connection = require('../database/connection');
 module.exports = {
   async index(req, res) {
     const companies = await connection('company').select('*');
-
     return res.json(companies);
   },
   async create(req, res) {
