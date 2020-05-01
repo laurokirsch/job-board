@@ -44,6 +44,12 @@
   margin-bottom: 24px;
 }
 
+.profile-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #666;
+}
+
 .profile-container ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
