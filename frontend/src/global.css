@@ -23,13 +23,33 @@ button {
   cursor: pointer;
 }
 
-form input {
+form input,
+form select {
   width: 100%;
   height: 60px;
   color: #333;
   border: 1px solid #dcdce6;
   border-radius: 8px;
   padding: 0 24px;
+}
+
+form select {
+  font: 400 18px Roboto, sans-serif;
+  color: #747474;
+  text-indent: 18px;
+  background: #fff;
+}
+
+form textarea {
+  width: 100%;
+  min-height: 140px;
+  color: #333;
+  border: 1px solid #dcdce6;
+  border-radius: 8px;
+  padding: 0 24px;
+  padding: 16px 24px;
+  line-height: 24px;
+  resize: vertical;
 }
 
 .button {

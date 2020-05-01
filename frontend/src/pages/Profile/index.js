@@ -11,7 +11,7 @@ const Profile = () => {
       <header>
         <img src={logoImg} alt='Hyper Jobs' />
         <span>Welcome, Company</span>
-        <Link className='button' to='job/new'>
+        <Link to='job/new' className='button' to='job/new'>
           Post new job
         </Link>
         <button type='button'>
