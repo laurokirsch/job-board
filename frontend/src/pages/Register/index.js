@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 
@@ -15,10 +15,6 @@ const Register = () => {
   const [website, setWebsite] = useState('');
 
   const history = useHistory();
-
-  useEffect(() => {
-    console.log(name, email, country, city, website);
-  }, []);
 
   const handleRegister = async (e) => {
     e.preventDefault();

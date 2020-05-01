@@ -60,6 +60,10 @@ const Profile = () => {
             <p>{tags}</p>
             <strong>Remote</strong>
             <p>{remote ? 'Yes' : 'No'}</p>
+            <strong>Location</strong>
+            <p>
+              {country} - {city}
+            </p>
             <button type='button' onClick={() => handleDelete(id)}>
               <FiTrash2 size={20} color='#a8a8b3' />
             </button>
@@ -74,7 +78,7 @@ const Profile = () => {
       <header>
         <img src={logoImg} alt='Hyper Jobs' />
         <span>Welcome, {companyName}</span>
-        <Link to='job/new' className='button' to='job/new'>
+        <Link to='job/new' className='button'>
           Post new job
         </Link>
         <button type='button' onClick={handleLogout}>
