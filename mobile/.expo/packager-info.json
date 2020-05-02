@@ -2,8 +2,9 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 7040,
+  "packagerPid": 9507,
   "expoServerNgrokUrl": "https://wx-8ds.anonymous.mobile.exp.direct",
   "packagerNgrokUrl": "https://packager.wx-8ds.anonymous.mobile.exp.direct",
-  "ngrokPid": 7054
+  "ngrokPid": 9520,
+  "webpackServerPort": null
 }
