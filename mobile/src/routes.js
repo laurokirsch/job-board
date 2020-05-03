@@ -7,13 +7,13 @@ import Single from './pages/Single';
 
 const AppStack = createStackNavigator();
 
-const Routes = () => (
-  <NavigationContainer>
-    <AppStack.Navigator screenOptions={{ headerShown: false }}>
-      <AppStack.Screen name='Jobs' component={Jobs} />
-      <AppStack.Screen name='Single' component={Single} />
-    </AppStack.Navigator>
-  </NavigationContainer>
-);
-
-export default Routes;
+export default function Routes() {
+  return (
+    <NavigationContainer>
+      <AppStack.Navigator screenOptions={{ headerShown: false }}>
+        <AppStack.Screen name='Jobs' component={Jobs} />
+        <AppStack.Screen name='Single' component={Single} />
+      </AppStack.Navigator>
+    </NavigationContainer>
+  );
+}
