@@ -5,16 +5,13 @@ export default StyleSheet.create({
     flex: 1,
     paddingHorizontal: 15,
     paddingTop: Constants.statusBarHeight,
-    backgroundColor: '#031427',
   },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  headerText: {
-    color: '#fff',
-  },
+  headerText: {},
   headerTextBold: {
     // fontWeight: 'bold',
   },
@@ -30,5 +27,32 @@ export default StyleSheet.create({
   },
   description: {
     fontSize: 16,
+  },
+  jobsList: {
+    marginTop: 32,
+  },
+  job: {
+    padding: 24,
+    borderRadius: 8,
+    backgroundColor: '#fff',
+    marginBottom: 16,
+  },
+  jobProperty: {
+    fontWeight: 'bold',
+  },
+  jobValue: {
+    marginTop: 8,
+    fontSize: 15,
+    marginBottom: 24,
+  },
+  detailsButton: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  detailsButtonText: {
+    fontWeight: 'bold',
+    fontSize: 15,
+    color: 'darkblue',
   },
 });
